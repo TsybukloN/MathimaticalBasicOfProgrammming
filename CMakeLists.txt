@@ -6,6 +6,6 @@ cmake_minimum_required (VERSION 3.8)
 project ("MathimaticalBasicOfProgrammming")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (MathimaticalBasicOfProgrammming "MathimaticalBasicOfProgrammming.cpp" )
+add_executable (MathimaticalBasicOfProgrammming "main.cpp"  "Dev.cpp" "MBOP.h")
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
