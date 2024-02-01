@@ -14,7 +14,7 @@ int main() {
 	float flt;
 
 	while (true) {
-		cout << "\nChoose option: \n"
+		cout << "Choose option: \n"
 			<< "1) Dec to any\n"
 			<< "2) Any to dec\n"
 			<< "3) Oct to Bin\n"
@@ -88,6 +88,8 @@ int main() {
 			writeBin2float(sNumber);
 			break;
 		}
+
+		cout << '\n';
 	}
 
 	return 0;

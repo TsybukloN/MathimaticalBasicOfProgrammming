@@ -135,11 +135,10 @@ string BinSum(string n1, string n2) {
 	int carry = 0, n1Size = (int)n1.length(), n2Size = (int)n2.length();
 	string result;
 
-	int maxLength = max(n1Size, n2Size);
-	string paddedN1 = string(maxLength - n2Size, '0') + n1;
-	string paddedN2 = string(maxLength - n2Size, '0') + n2;
+	string paddedN1 = string(maxCells - n1Size, '0') + n1;
+	string paddedN2 = string(maxCells - n2Size, '0') + n2;
 
-	for (int i = maxLength - 1; i >= 0; --i) {
+	for (int i = maxCells - 1; i >= 0; --i) {
 		int bitSum = (paddedN1[i] - '0') + (paddedN2[i] - '0') + carry;
 		result.insert(result.begin(), '0' + bitSum % 2);
 		carry = bitSum / 2;
@@ -179,7 +178,8 @@ string C1(int x) {
 
 string writeC1(int x) {
 	string bits = writeInt2Any(abs(x), 2);
-	bits = string(16 - bits.size(), '0') + bits;
+	cout << (int)log2(abs(x)) + 1 << " signs\n";
+	bits = string(maxCells - bits.size(), '0') + bits;
 	if (x < 0) {
 		cout << bits << " -> ";
 		int n = bits.size();
